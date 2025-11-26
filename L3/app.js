@@ -1,40 +1,43 @@
+"use strict";
 // union, literals, type alias 
+Object.defineProperty(exports, "__esModule", { value: true });
 // UNION -> | pipe in ts
-var sum = function (num1, num2) {
+const sum = (num1, num2) => {
     if (typeof num1 === "number" && typeof num2 === "number")
         return num1 + num2;
     else
         return num1.toString() + " " + num2.toString();
 };
-var num = sum(30, 15);
-var joined = sum("avni", "sharma");
+const num = sum(30, 15);
+const joined = sum("avni", "sharma");
 console.log(num, joined);
 // LITERALS (custom types)
-var add = function (num1, num2, conversionType) {
+const add = (num1, num2, conversionType) => {
     if (typeof num1 === "number" && typeof num2 === "number" || conversionType === "as-number")
         return +num1 + +num2;
     else
         return num1.toString() + " " + num2.toString();
 };
-var numNew = add(5, 10, "as-number");
-var strNum = add("15", "20", "as-number");
+const numNew = add(5, 10, "as-number");
+const strNum = add("15", "20", "as-number");
 console.log(numNew, strNum);
-var combine = function (num1, num2, conversionType) {
+const combine = (num1, num2, conversionType) => {
     if (typeof num1 === "number" && typeof num2 === "number" || conversionType === "as-number")
         return +num1 + +num2;
     else
         return num1.toString() + " " + num2.toString();
 };
-var el = combine(5, 10, "as-number");
-var strEl = combine("15", "20", "as-number");
-var newName = combine("avni", "sharma", "as-string");
+const el = combine(5, 10, "as-number");
+const strEl = combine("15", "20", "as-number");
+const newName = combine("avni", "sharma", "as-string");
 console.log(el, strEl, newName);
-var user = {
+const user = {
     name: "avni",
     age: 22,
     skills: ["react", "node"]
 };
-var greet = function (user) {
-    console.log("My name is ".concat(user.name));
+const greet = (user) => {
+    console.log(`My name is ${user.name}`);
 };
 greet(user);
+//# sourceMappingURL=app.js.map
